@@ -33,7 +33,7 @@ class RingBuffer:
         while node:
             # Refresh with value passed in from node head
             list_buffer_contents.append(node.value)
-            # continue till you reach node value of none break's while loop
+            # continue till you reach node value of None which breaks the while loop
             node = node.next
         return list_buffer_contents
 
