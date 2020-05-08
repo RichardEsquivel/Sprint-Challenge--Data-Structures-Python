@@ -46,5 +46,13 @@ class LinkedList:
         return False
 
     def reverse_list(self, node, prev):
-        # You must use recursion for this solution
-        pass
+        # this captures the case where there are no items in the list just return
+        if node == None:
+            return
+        # Set head equal to the node and
+        self.head = node
+        # Save value of current next node in a variable to swap with the previous node
+        next = node.next_node
+        node.next_node = prev
+
+        return self.reverse_list(next, node)
